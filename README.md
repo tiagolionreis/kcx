@@ -4,7 +4,7 @@
 > **Programa de Pós-Graduação**: Ciência da Computação  
 > **Instituição**: Universidade Federal de Goiás
 > **Disciplina**: Tópicos Especiais em Redes  
-> **Orientador(a)**: Antônio  
+> **Orientador**: Antônio Carlos de Oliveira Júnior
 > **Ano**: 2025  
 
 ---
