@@ -1,13 +1,13 @@
 # 📘 KCC-A Uma variante do KCC
 
-> **Autor**: Tiago Marcelino Reis
+> - **Autor**: Tiago Marcelino Reis
 > **Programa de Pós-Graduação**: Ciência da Computação
-> **Autor**: Thiago de Souza Filgueiras
+> - **Autor**: Thiago de Souza Filgueiras
 > **Graduação**: Ciência da Computação   
-> **Instituição**: Universidade Federal de Goiás
-> **Disciplina**: Tópicos Especiais em Redes  
-> **Orientador**: Antônio Carlos de Oliveira Júnior
-> **Ano**: 2025  
+> - **Instituição**: Universidade Federal de Goiás
+> - **Disciplina**: Tópicos Especiais em Redes  
+> - **Orientador**: Antônio Carlos de Oliveira Júnior
+> - **Ano**: 2025  
 
 ---
 
