@@ -256,6 +256,60 @@ Alinhamento Genético Multidimensional e Aprendizado de Recursos (Feature Learni
 
 A expectativa é que o KCC-A, ao incorporar essas capacidades adaptativas, melhore significativamente a robustez do Exoskeleton em cenários de red teaming do mundo real, onde a dinâmica das ameaças exige uma capacidade de resposta e adaptação contínuas. Esta variação do algoritmo será minuciosamente investigada, implementada e avaliada como parte da minha dissertação de mestrado.
 
+### 7.3 Plano de Trabalho para Aplicação do KCC em Novos Cenários
+
+
+O objetivo central da pesquisa é validar e expandir a aplicabilidade do algoritmo Kill Chain Catalyst (KCC) para além dos ambientes pré-configurados. Para alcançar isso, o plano de trabalho a seguir detalha os estudos técnicos e as etapas de implementação necessárias para integrar o framework Exoskeleton com novos cenários de teste, como máquinas virtuais de plataformas como Vulnhub, Hack The Box ou TryHackMe.
+
+
+#### 7.3.1 Análise da Arquitetura de Interface do Framework
+
+O primeiro passo consiste em realizar uma engenharia reversa detalhada dos componentes do Exoskeleton que servem como ponte entre o algoritmo e o ambiente.
+
+
+- Estudo do Módulo de Ações: Analisar a implementação dos scripts no diretório /actions. O foco é entender o padrão de projeto utilizado para invocar ferramentas de linha de comando, gerenciar seus processos e, fundamentalmente, analisar como os resultados (saídas de texto, códigos de erro) são padronizados para sinalizar sucesso ou falha ao sistema principal.
+
+
+- Análise da Representação de Estado: Investigar como as informações coletadas pelas ações são estruturadas e armazenadas para formar o estado que o agente observa a cada passo. É preciso mapear quais classes e estruturas de dados são responsáveis por manter o conhecimento sobre o ambiente, como IPs descobertos, portas abertas e credenciais válidas.
+
+
+- Exame da Função de Recompensa: Localizar e decompor a lógica de programação que calcula a recompensa do agente. O objetivo é compreender como o progresso em direção aos objetivos (como a captura de uma flag) é quantificado numericamente, para que essa lógica possa ser replicada ou adaptada para novos objetivos.
+
+
+#### 7.3.2 Desenvolvimento de Módulos de Interação para um Cenário Alvo
+
+Com base na análise anterior, a próxima etapa é a implementação prática dos componentes necessários para um novo cenário específico.
+
+
+- Implementação de um Conjunto de Ações Customizado: Desenvolver novos scripts de ação em Python que encapsulem as ferramentas e técnicas necessárias para o novo ambiente alvo. Isso inclui desde a adaptação de ações existentes até a criação de novas para explorar vulnerabilidades específicas do cenário escolhido.
+
+
+- Adaptação da Estrutura de Estado: Modificar ou estender a representação de estado do Exoskeleton para que ela possa armazenar as informações específicas e relevantes do novo alvo.
+
+
+- Reconfiguração dos Critérios de Objetivo e Recompensa: Ajustar o código do ambiente para reconhecer o novo objetivo final (ex: a localização e o conteúdo de uma nova flag) e modificar a função de recompensa para guiar o agente KCC em direção a esse novo alvo.
+
+
+#### 7.3.3 Teste e Validação da Integração do Novo Ambiente
+
+Esta fase garante que a comunicação entre o framework e o novo ambiente está funcionando corretamente.
+
+
+- Configuração da Conectividade de Rede: Estabelecer e testar a comunicação de rede entre a máquina que executa o Exoskeleton e a máquina vulnerável alvo, garantindo que as ferramentas de ataque possam alcançar o destino.
+
+
+- Execução de Testes de Integração: Realizar testes unitários em cada nova ação implementada para confirmar que ela interage corretamente com o alvo e reporta os resultados de forma consistente. A seguir, executar o ciclo completo (Ação -> Estado -> Recompensa) para validar a integração.
+
+
+#### 7.3.4 Análise da Robustez e Eficiência do KCC
+
+Após a integração bem-sucedida, a etapa final é a avaliação científica do desempenho do algoritmo no novo cenário.
+
+
+- Condução de Experimentos Controlados: Treinar e executar o agente KCC múltiplas vezes no novo ambiente, coletando métricas de desempenho como taxa de sucesso, número médio de passos para atingir o objetivo e tempo de convergência.
+
+
+- Análise Comparativa de Resultados: Comparar as métricas obtidas no novo cenário com os resultados dos ambientes originais (dummy e CVE-2018-10993). Esta análise permitirá quantificar a capacidade de generalização do KCC e discutir os desafios e limitações encontrados ao aplicá-lo em um ambiente para o qual ele não foi originalmente projetado.
 ---
 
 ## 8. Referências
