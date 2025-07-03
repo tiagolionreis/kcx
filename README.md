@@ -229,25 +229,7 @@ Em suma, os resultados obtidos reforçam o potencial do Exoskeleton como uma fer
 
 Este capítulo destina-se à apresentação visual dos resultados e à demonstração da execução dos algoritmos implementados no projeto Exoskeleton. As imagens a seguir são prints de tela que retratam o desempenho dos diferentes agentes e a visualização das kill chains geradas.
 
-### 7.1 Gráficos de Desempenho
-Os gráficos abaixo ilustram a performance dos agentes KCU (com e sem KCC), PPO e a comparação entre eles nos cenários dummy e NASim (tiny).
-
-Gráfico 7.1.1: KCC -- DUMMY SCENARIO -- EXOSKELETON
-Inserir imagem do gráfico project/demo-kcc-charts.png aqui.
-
-Gráfico 7.1.2: KCC WITH JEOPARD MODE -- DUMMY SCENARIO -- EXOSKELETON
-Inserir imagem do gráfico project/demo-kcc-jeopard-charts.png aqui.
-
-Gráfico 7.1.3: KCC x PPO -- DUMMY SCENARIO -- EXOSKELETON
-Inserir imagem do gráfico project/combined_charts_kcc_ppo.png aqui.
-
-Gráfico 7.1.4: KCU x KCC -- TINY SCENARIO (NASim)
-Inserir imagem do gráfico project/combined_charts_kcu_kcc_tiny.png aqui.
-
-Gráfico 7.1.5: KCC x PPO -- TINY SCENARIO (NASim)
-Inserir imagem do gráfico project/combined_charts_kcc_ppo_tiny.png aqui.
-
-### 7.2 Prints de Tela da Execução
+### 7.1 Prints de Tela da Execução
 As imagens a seguir capturam momentos chave da execução dos algoritmos, demonstrando a interação dos agentes com os ambientes de teste e o progresso em direção aos objetivos de red teaming.
 
 Imagem 7.2.1: Execução do Agente KCU no Cenário Dummy
@@ -264,35 +246,6 @@ Inserir print de tela da execução do python agent_jeopard.py, mostrando a sequ
 
 Imagem 7.2.5: Agente Random em Ação
 Inserir print de tela da execução do python agent_random.py, mostrando a natureza aleatória das ações.
-
-### 7.3 Kill Chains Ótimas Identificadas
-Abaixo, as sequências de kill chain ótimas identificadas pelos algoritmos nos cenários de teste, conforme mencionado na descrição do projeto.
-
-Cenário Dummy:
-
-ScanningIPBlocks
-
-WordlistScanning
-
-EmailAddresses
-
-PasswordGuessingSSH
-
-LocalAccountsSSH
-
-FileandDirectoryDiscoverySSH
-
-SetuidandSetgidSSH
-
-DatafromLocalSystemSSH
-
-Cenário CVE-2018-10993:
-
-ScanningIPBlocks
-
-LibSSHUnauthorizedAccess
-
-DatafromLocalSystemSSH
 
 ---
 
