@@ -17,9 +17,8 @@
 - [4. Metodologia](#4-metodologia)
 - [5. Desenvolvimento](#5-desenvolvimento)
 - [6. Resultados e Discussões](#6-resultados-e-discussões)
-- [7. Apresentação dos Gráficos e Execução](#7-Apresentação-dos-Gráficos-e-Execução)
-- [8.Considerações Finais](#Considerações-Finais)
-- [9. Referências](#9-referências)
+- [7.Considerações Finais](#7-Considerações-Finais)
+- [8. Referências](#8-referências)
 
 ---
 
@@ -225,31 +224,7 @@ Em suma, os resultados obtidos reforçam o potencial do Exoskeleton como uma fer
 
 ---
 
-## 7. Apresentação dos Gráficos e Execução
-
-Este capítulo destina-se à apresentação visual dos resultados e à demonstração da execução dos algoritmos implementados no projeto Exoskeleton. As imagens a seguir são prints de tela que retratam o desempenho dos diferentes agentes e a visualização das kill chains geradas.
-
-### 7.1 Prints de Tela da Execução
-As imagens a seguir capturam momentos chave da execução dos algoritmos, demonstrando a interação dos agentes com os ambientes de teste e o progresso em direção aos objetivos de red teaming.
-
-Imagem 7.2.1: Execução do Agente KCU no Cenário Dummy
-Inserir print de tela da execução do python agent_kcu.py no cenário dummy, mostrando a saída no terminal ou logs relevantes.
-
-Imagem 7.2.2: Execução do Agente PPO no Cenário Dummy
-Inserir print de tela da execução do python agent_ppo.py no cenário dummy, mostrando a saída no terminal ou logs relevantes.
-
-Imagem 7.2.3: Início do Cenário CVE-2018-10993 via Docker Compose
-Inserir print de tela da inicialização do docker-compose up no diretório scenarios/CVE-2018-10993.
-
-Imagem 7.2.4: Agente Jeopard em Ação
-Inserir print de tela da execução do python agent_jeopard.py, mostrando a sequência estática de ações.
-
-Imagem 7.2.5: Agente Random em Ação
-Inserir print de tela da execução do python agent_random.py, mostrando a natureza aleatória das ações.
-
----
-
-## 8. Considerações Finais
+## 7. Considerações Finais
 
 Este trabalho apresentou o projeto Exoskeleton, uma plataforma inovadora para a automação de operações de red teaming em cenários de Capture The Flag (CTF), atuando como uma camada de abstração entre algoritmos de Aprendizado por Reforço (RL) e máquinas vulneráveis. A pesquisa explorou a eficácia do algoritmo Kill Chain Unscrambler (KCU) e do módulo Kill Chain Catalyst (KCC), comparando seu desempenho com algoritmos de RL convencionais, como o PPO, em diversos ambientes de teste.
 
@@ -257,7 +232,7 @@ Os resultados obtidos demonstraram consistentemente a superioridade do KCU, espe
 
 A capacidade do Exoskeleton de integrar diversas táticas, técnicas e procedimentos (TTPs) de red teaming e de operar em ambientes controlados via Docker, com potencial para integração futura com plataformas como Vulnhub, Hack The Box (HTB) e TryHackMe (THM), ressalta sua relevância prática e seu potencial para pesquisa avançada em segurança cibernética. Este projeto contribui significativamente para a automação do red teaming, oferecendo uma ferramenta promissora para a detecção proativa de vulnerabilidades e o fortalecimento das defesas cibernéticas.
 
-### 8.1 Limitações e Trabalhos Futuros
+### 7.1 Limitações e Trabalhos Futuros
 Apesar dos resultados promissores, o projeto Exoskeleton, ainda em desenvolvimento ativo, apresenta algumas limitações e abre portas para futuros trabalhos:
 
 Complexidade de Cenários: Atualmente, os cenários de teste são pré-configurados. A escalabilidade do Exoskeleton para ambientes de rede em larga escala e com maior complexidade, incluindo interações mais dinâmicas e imprevisíveis, é um desafio a ser explorado.
@@ -268,7 +243,7 @@ Interpretabilidade Aprofundada: Embora o KCU utilize árvores de decisão para m
 
 Otimização do KCC para Diferentes Escalas: A influência do KCC no KCU foi demonstrada em cenários específicos. Pesquisas futuras podem investigar a otimização dos parâmetros do KCC e sua adaptabilidade a diferentes escalas e complexidades de kill chains.
 
-### 8.2 Proposta de Variação do Algoritmo KCC para Pesquisa de Mestrado
+### 7.2 Proposta de Variação do Algoritmo KCC para Pesquisa de Mestrado
 Como objeto de pesquisa para o mestrado, proponho uma variação do algoritmo Kill Chain Catalyst (KCC), denominada KCC-Adaptativo (KCC-A). O objetivo principal do KCC-A é aprimorar a capacidade de adaptação do KCC em cenários de red teaming altamente dinâmicos e desconhecidos, onde as características das kill chains ideais podem mudar rapidamente.
 
 A inovação do KCC-A reside em duas frentes principais:
@@ -281,7 +256,7 @@ A expectativa é que o KCC-A, ao incorporar essas capacidades adaptativas, melho
 
 ---
 
-## 9. Referências
+## 8. Referências
 [1] HORTA, Antonio Jose Neto; DOS SANTOS, Anderson Fernandes Pereira; GOLDSHMIDT, Ronaldo. Kill Chain Catalyst for Autonomous Red Team Operations in Dynamic Attack Scenarios. In: Simpósio Brasileiro de Segurança da Informação e de Sistemas Computacionais (SBSeg), 2024. Disponível em: https://doi.org/10.5753/sbseg.2024.241371.
 
 ```bibtex
